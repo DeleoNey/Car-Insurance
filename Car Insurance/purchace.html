@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="styles.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>АвтоЩит - Оформлення полісу</title>
+</head>
+<body>
+<div class="container">
+    <header class="header">
+        <img src="./Logo.png" alt="АвтоЩит" class="logo">
+        <nav class="nav-container">
+            <div>
+                <a href="#" class="nav-link green">Страхування онлайн</a>
+                <a href="#" class="nav-link">Оплатити поліс</a>
+                <a href="#" class="nav-link">Страховий випадок</a>
+            </div>
+            <button class="header-button">Увійти</button>
+        </nav>
+    </header>
+
+    <div class="breadcrumb">
+        АвтоЩит > ОСЦПВ > Пропозиції > Оформлення
+    </div>
+
+    <main class="main-content">
+        <section class="form-section">
+            <h2>Контактні дані</h2>
+            <form id="insuranceForm" method="POST" action="purchace.php">
+                <div class="form-group">
+                    <label for="name">Ім'я</label>
+                    <input type="text" id="name" name="name" placeholder="Іван" required>
+                </div>
+                <div class="form-group">
+                    <label for="surname">Прізвище</label>
+                    <input type="text" id="surname" name="surname" placeholder="Степаненко" required>
+                </div>
+                <div class="form-group">
+                    <label for="patronymic">По батькові</label>
+                    <input type="text" id="patronymic" name="patronymic" placeholder="Андрійович" required>
+                </div>
+                <div class="form-group">
+                    <label for="client_id">РНОКПП</label>
+                    <input type="text" id="client_id" name="client_id" placeholder="0084568392" required>
+                </div>
+                <div class="form-group">
+                    <label for="car-number">Держ. номер авто</label>
+                    <input type="text" placeholder="<?php echo $carNumber; ?>" readonly>
+                </div>
+                <div class="form-group">
+                    <label for="car-brand">Марка</label>
+                    <input type="text" placeholder="<?php echo $brand; ?>" readonly>
+                </div>
+                <div class="form-group">
+                    <label for="car-model">Модель</label>
+                    <input type="text" placeholder="<?php echo $model; ?>" readonly>
+                </div>
+                <div class="form-group">
+                    <label for="car-year">Рік випуску</label>
+                    <input type="text" placeholder="<?php echo $year; ?>" readonly>
+                </div>
+                <div class="form-group">
+                    <label for="vin">VIN-Номер</label>
+                    <input type="text" placeholder="<?php echo $vin; ?>" readonly>
+                </div>
+                <button class="confirm-btn" type="submit" name="confirm">Підтвердити</button>
+            </form>
+        </section>
+
+        <section class="policy-section">
+            <h2>Електронний поліс ОСЦПВ</h2>
+            <div class="policy-details">
+                <div class="policy-item">
+                    <span>VUSOB</span>
+                </div>
+                <div class="policy-item">
+                    <span>Франшиза</span>
+                    <span> <?php echo number_format($basePrice / 2, 2); ?> грн. </span>
+                </div>
+                <div class="policy-item">
+                    <span>Реєстрація</span>
+                    <span>Львів</span>
+                </div>
+                <div class="policy-item">
+                    <span>Пільги</span>
+                    <span>Відсутні</span>
+                </div>
+                <div class="policy-item">
+                    <span>Термін дії</span>
+                    <span>12 місяців</span>
+                </div>
+                <div class="policy-item">
+                    <span>Тип транспортного засобу</span>
+                    <span>Легковий автомобіль</span>
+                </div>
+                <div class="policy-item">
+                    <span>ОСЦПВ</span>
+                    <span><s><?php echo number_format($basePrice, 2); ?> грн.</s> <?php echo number_format($basePrice * 0.9, 2); ?> грн.</span>
+                </div>
+                <div class="total-price">
+                    <span>До сплати:</span>
+                    <span><?php echo number_format($basePrice * 0.9, 2); ?> грн.</span>
+                </div>
+            </div>
+        </section>
+    </main>
+
+</body>
+</html>

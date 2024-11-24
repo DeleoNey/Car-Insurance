@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>АвтоЩит - Електронний сертифікат про страхування</title>
+    <style>
+        @font-face {
+            font-family: 'Mariupol';
+            src: url('https://cdnjs.cloudflare.com/ajax/libs/mariupol/1.0.0/Mariupol-Regular.woff2') format('woff2');
+            font-weight: normal;
+            font-style: normal;
+        }
+
+        body {
+            font-family: 'Mariupol', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            background: linear-gradient(180deg, #e6ffe6 0%, #e6f7ff 100%);
+            min-height: 100vh;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        /* Header */
+.header {
+display: flex;
+z-index: 1;
+position: sticky;
+top: 20px;
+margin-bottom: 20px;
+
+max-width: 1440px;
+max-height: 85px;
+background: #FFFFFF;
+
+border-radius: 60px;
+padding: 24px 36px;
+
+gap: 84px;
+align-items: center;
+}
+
+.nav-container{
+display: flex;
+width: 100%;
+justify-content: space-between;
+}
+
+.logo {
+height: 32px;
+}
+
+.nav {
+display: flex;
+gap: 15px;
+align-items: center;
+}
+
+.nav-link {
+width: fill;
+text-decoration: none;
+color: #333;
+padding: 8px 12px;
+border-radius: 20px;
+font-size: 14px;
+transition: all 0.3s ease;
+}
+
+.nav-link:hover {
+background: #f5f5f5;
+}
+
+.nav-link.green {
+background: #00cc66;
+color: white;
+}
+
+.nav-link.green:hover {
+background: #00b359;
+}
+.header-button{
+padding: 10px 16px 10px 16px;
+gap: 10px;
+border-radius: 47px;
+border: none;
+
+background: #DDF9DB;
+color: #01CF72;
+
+}
+.header-button:hover{
+cursor: pointer;
+
+}
+.button {
+    padding: 10px 20px;
+    border-radius: 20px;
+    border: none;
+    cursor: pointer;
+    font-weight: 500;
+}
+
+.button-primary {
+    padding: 10px 16px 10px 16px;
+
+    border-radius: 47px;
+    border: none;
+
+    background: #DDF9DB;
+    color: #01CF72;
+}
+
+.button-outline {
+    background: transparent;
+    color: #00df91;
+    border: 1px solid #00df91;
+}
+        .breadcrumb {
+            margin-bottom: 20px;
+            color: #666;
+            font-size: 14px;
+        }
+        .certificate-container {
+            background: white;
+            border-radius: 20px;
+            padding: 20px;
+            margin-bottom: 20px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+        .vehicle-info {
+            background: #e6ffe6;
+            border-radius: 10px;
+            padding: 15px;
+            width: 30%;
+        }
+        .vehicle-info h2 {
+            margin: 0 0 10px 0;
+            font-size: 24px;
+        }
+        .vehicle-info p {
+            margin: 5px 0;
+            font-size: 14px;
+        }
+        .certificate-details {
+            width: 50%;
+        }
+        .certificate-details h2 {
+            margin: 0 0 10px 0;
+            font-size: 20px;
+            color: #01CF72;
+        }
+        .certificate-details p {
+            margin: 5px 0;
+            font-size: 14px;
+        }
+        .qr-code {
+            width: 100px;
+            height: 100px;
+            background: #ccc;
+            align-self: flex-start;
+        }
+        .main-info {
+            background: white;
+            border-radius: 20px;
+            padding: 20px;
+            margin-bottom: 20px;
+            position: relative;
+        }
+        .main-info h2 {
+            margin: 0 0 15px 0;
+            font-size: 20px;
+            color: #01CF72;
+        }
+        .main-info p {
+            margin: 5px 0;
+            font-size: 14px;
+        }
+        .main-info .qr-code {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+        }
+        .main-info-content {
+            margin-right: 120px;
+        }
+        .footer {
+            background: #001D29;
+            color: white;
+            padding: 40px 0;
+        }
+        .footer-content {
+            display: flex;
+            justify-content: space-between;
+        }
+        .footer-column {
+            flex: 1;
+        }
+        .footer-column h3 {
+            font-size: 16px;
+            margin-bottom: 10px;
+        }
+        .footer-column p {
+            font-size: 14px;
+            margin: 5px 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+    <header class="header">
+
+            <img src="./Logo.png" alt="АвтоЩит" class="logo">
+            <div class="nav-container">
+            <nav class="nav">
+                <a href="#" class="nav-link green">Страхування онлайн</a>
+                <a href="#" class="nav-link">Оплатити поліс</a>
+                <a href="#" class="nav-link">Страховий випадок</a>
+            </nav>
+            <button type="button" class="header-button">Увійти</button>
+        </div>
+        </header>
+
+
+        <div class="certificate-container">
+            <div class="vehicle-info">
+                <h2>Peugeot 508</h2>
+                <p>JVZZXCJZ3R494276</p>
+                <p>Рік випуску: 2003</p>
+                <p>Держ. номер: BC3215PC</p>
+            </div>
+            <div class="certificate-details">
+                <h2>Електронний сертифікат про страхування</h2>
+                <p><strong>ЕЛЕКТРОННИЙ ПОЛІС</strong></p>
+                <p>обов'язкового страхування цивільно-правової відповідальності власників наземних транспортних засобів</p>
+                <p>№ 2131515129423 від 10.10.2024</p>
+                <p><strong>Леськів Максим Андрійович</strong></p>
+            </div>
+            <img src="/api/placeholder/100/100" alt="QR Code" class="qr-code">
+        </div>
+
+        <div class="main-info">
+            <img src="/api/placeholder/100/100" alt="QR Code" class="qr-code">
+            <div class="main-info-content">
+                <h2>Основна інформація:</h2>
+                <p>Страховик: ПрАТ "НАЗВА СТРАХОВОЇ КОМПАНІЇ"</p>
+                <p>Ліцензія: АВ 213/51529423 від 10.10.2024</p>
+                <p>ЄДРПОУ: XXXXXXXX</p>
+                <p>Страхувальник: Леськів Максим Андрійович</p>
+                <p>ІПН: 00596972241</p>
+                <p>Адреса: Львів, Героїв України, 29Б</p>
+                <p>Тел.: +380692247841</p>
+                <p>Забезпечений транспортний засіб:</p>
+                <p>Марка: [Lexus]</p>
+                <p>Модель: [LX 570]</p>
+                <p>Держ. номер: [BC 7777 BC]</p>
+                <p>VIN: [JTJBGMCA202066471]</p>
+                <p>Строк дії договору:</p>
+                <p>з 19:31 год. 10.10.2024</p>
+                <p>до 19:31 год. 10.10.2025</p>
+                <p>Страховий платіж: 3080.35 грн</p>
+                <p>Франшиза: 295.64 грн</p>
+                <p>Договір укладено в електронній формі з використанням Інформаційно-телекомунікаційної системи страховика.</p>
+                <p>Достовірність цього полісу можна перевірити на сайті АТСА: https://policy-check.atca.ua</p>
+            </div>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <div class="container footer-content">
+            <div class="footer-column">
+                <h3>Гаряча лінія</h3>
+                <p>Телефон: 0800-321-123</p>
+                <p>Email: info@autoshield.ua</p>
+            </div>
+            <div class="footer-column">
+                <h3>Адреса</h3>
+                <p>Адреса: м. Київ, вул. Страхова, 1</p>
+            </div>
+            <div class="footer-column">
+                <h3>Контакти</h3>
+                <p>Телефон: 0800-321-123</p>
+                <p>Для дзвінків з-за кордону: +380 080 022 22 23</p>
+            </div>
+        </div>
+        <div class="container">
+            <p>АвтоЩит - ваш надійний партнер у страхуванні з 2014 року</p>
+        </div>
+    </footer>
+</body>
+</html>
