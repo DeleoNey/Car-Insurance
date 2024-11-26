@@ -40,7 +40,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
 
     // Підключення до бази даних
-    $conn = new mysqli('localhost', 'root', 'root', 'insurancecar'); // Змініть дані підключення
+    $conn = new mysqli('localhost', 'root', 'root', 'insurancecar');
 
     if ($conn->connect_error) {
         die("Connection failed: " . $conn->connect_error);
