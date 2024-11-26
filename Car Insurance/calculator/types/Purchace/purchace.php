@@ -119,7 +119,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     // Додати запис у таблицю policies
     $start_date = date('Y-m-d');
     $end_date = date('Y-m-d', strtotime('+1 year'));
-    $policy_type_id = 1; // Ваше значення policy_type_id
+    $policy_type_id = 1; // Значення policy_type_id
 
     $insertPolicy = "INSERT INTO policies (client_id, vehicle_number, policy_type_id, start_date, end_date) VALUES (?, ?, ?, ?, ?)";
     $stmt = $conn->prepare($insertPolicy);
