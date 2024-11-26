@@ -10,7 +10,7 @@ ini_set('session.use_cookies', 1);
 
 
 
-// Діагностика: Перевіряємо наявність цін у сесії
+// Перевіряємо наявність цін у сесії
 if (!isset($_SESSION['prices'])) {
     echo "Ціни не знайдені у сесії.";
     exit();
@@ -34,7 +34,7 @@ $year = htmlspecialchars($carData['year']);
 $vin = htmlspecialchars($carData['vin']);
 
 // Підключення до бази даних
-$conn = new mysqli('localhost', 'root', 'root', 'insurancecar'); // Змініть дані підключення
+$conn = new mysqli('localhost', 'root', 'root', 'insurancecar');
 
 if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
